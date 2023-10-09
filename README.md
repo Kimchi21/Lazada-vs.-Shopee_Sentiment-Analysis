@@ -19,7 +19,7 @@ Understanding customer sentiment and preferences on particular platforms is esse
 ## Methodology<a name="methodology"></a>
 
 <p align="center">
-  <img src="Resources/Laz vs. Shopee - Methodology.png" alt="methodology" width="550">
+  <img src="Resources/Laz vs. Shopee - Methodology.png" alt="methodology" width="650">
 </p>
 
 ### Data Source
@@ -69,33 +69,33 @@ The initial dataset for Lazada contained 788,257 rows. After preprocessing, whic
 
 ### Key Insights from EDA
 
- 1. Distribution of reviews according to when they were made
+#### 1. **Distribution of reviews according to when they were made**
 
  The distribution of reviews by user rating in Lazada go way back in 2013 in which it started off with mainly positive reviews. Reviews gained traction at the end of 2018 and steadily had reviews during and after the pandemic hit. 
  
  As for Shopee the distribution of reviews by user rating in Shopee unfortunately go back only to 2021 this might be because of the data being scraped. It had steady positive reviews at the mid of 2021 however there can be seen a surgence of negative reviews at the month of April and September of 2022.
 
 
- 2. Which reviews garnered the most number of thumbs up from their reviews both positive and negative
+#### 2. **Which reviews garnered the most number of thumbs up from their reviews both positive and negative**
  
  Based on Lazada reviews, negative ratings tend to receive more thumbs up on average, than positive ratings. 
  
  The same trend can be seen with Shopee reviews, in which negative ratings tend to receive more thumbs up on average than positive ratings.
 
- 3. Most frequently used words for positive and negative reviews
+#### 3. **Most frequently used words for positive and negative reviews**
 
  After adding some custom stopwords the word cloud is finally giving cohesive sentiments fleshing out the reviews based on positive and negative content. It can be seen in Lazada the most frequently used words for positive reviews mainly suggest positive qualities like the app is easy to use, good service and great. While, the most frequently used words for negative reviews are even, order, and product.
 
  Same thing with shopee by adding some custom stop words the sentiments become a lot fleshed out. The most frequently used words for positive reviews in shopee are good, thank and nice. On the other hand, the most frequently used words for negative reviews in shopee are order, even and customer service.
 
- 4. What version of the app had the most positive and negative reviews
+#### 4. **What version of the app had the most positive and negative reviews**
 
  Lazada app version **6.38.2** had the most positive reviews, and app version **6.28.1** had the most negative reviews.
 
  As for Shopee, the app version with the most positive reviews is version **2.80.30** and the version with the most negative reviews is version **2.86.11**.
 
 #### Downsampling the Data
-Before proceeding to sentiment analysis and topic modeling. It would be unfair to comapre the two if there is a big discrepancy of number of data for both e-commerce platforms. Downsampling the data into 150,000 rows was done to have a fair evaluation of both.
+Before proceeding to sentiment analysis and topic modeling. It would be unfair to comapre the two if there is a big discrepancy in the number of number of data for both e-commerce platforms. Downsampling the data into 150,000 rows for each was done to have a fair evaluation of both.
 
 #### Data Dictionary
 The dataset contains the following features:
@@ -147,11 +147,11 @@ In VADER's confusion matrix, it correctly predicted 17,149 positive reviews but 
 |               | Precision | Recall | F1-Score | Support |
 |---------------|-----------|--------|----------|---------|
 | 0             | 0.84      | 0.77   | 0.80     | 34, 703  |
-| 1             | 0.86      | 0.97   | 0.91     | 115,297 |
+| 1             | 0.93      | 0.95   | 0.94     | 115,297 |
 |---------------|-----------|--------|----------|---------|
 | Accuracy      |           |        | 0.91     |150,000  |
 | Macro Avg     | 0.88      | 0.86   | 0.87     | 150,000 |
-| Weighted Avg  |   0.91    | 0.91    | 0.    | 150,000 |
+| Weighted Avg  |   0.91    | 0.91    | 0.91    | 150,000 |
 
 VADER's classification report shows precision, recall, and F1-Score for both classes (0 and 1). The model has relatively low recall for Class 0 (0.49), suggesting it struggles to identify negative reviews. It achieves a high recall for Class 1 (0.97), indicating its ability to accurately identify positive reviews. RoBERTa's classification report highlights its strengths. It achieves higher precision, recall, and F1-Score for both classes. Particularly, its recall for Class 0 is significantly better (0.77) than VADER's. The macro average and weighted average metrics also reflect RoBERTa's superior performance in achieving balanced results.
 
