@@ -1,7 +1,7 @@
 # Lazada vs. Shopee - Sentiment Analysis
 
 <p align="center">
-  <img src="https://cdn-oss.ginee.com/official/wp-content/uploads/2021/10/Screen-Shot-2021-10-11-at-6.00.15-PM.png" alt="vs" width="550">
+  <img src="https://cdn-oss.ginee.com/official/wp-content/uploads/2021/10/Screen-Shot-2021-10-11-at-6.00.15-PM.png" alt="vs" width="400">
 </p>
 
 ## Table of Contents
@@ -9,7 +9,9 @@
 2. [Methodology](#methodology)
 3. [Exploratory Data Analysis](#exploratory-data-analysis)
 4. [Results](#results)
-5. [Conclusion](#conclusion)
+5. [Recommendations](#recommendations)
+6. [Conclusion](#conclusion)
+7. [Dashboards](#dashboards)
 
 ## Overview<a name="overview"></a>
 Undoubtedly, online shopping has emerged as one of the most transformative modern conveniences. Among the Philippines' top e-commerce platforms, **Lazada** and **Shopee** stand out as highly favored choices. The e-commerce industry is rapidly evolving, and platforms like Lazada and Shopee have solidified their positions as pivotal contenders in the online shopping market. To guide informed decision-making, enhance user experiences, and shape effective marketing strategies, gaining a deep understanding of how users perceive and engage with these platforms is imperative.
@@ -71,26 +73,66 @@ The initial dataset for Lazada contained 788,257 rows. After preprocessing, whic
 
 #### 1. **Distribution of reviews according to when they were made**
 
+<p align="center">
+  <img src="Resources\laz_date_distribution.png" alt="lazdatedib" width="400">
+</p>
+
  The distribution of reviews by user rating in Lazada go way back in 2013 in which it started off with mainly positive reviews. Reviews gained traction at the end of 2018 and steadily had reviews during and after the pandemic hit. 
  
+<p align="center">
+  <img src="Resources\shopee_date_distribution.png" alt="shodatedib" width="400">
+</p>
+
  As for Shopee the distribution of reviews by user rating in Shopee unfortunately go back only to 2021 this might be because of the data being scraped. It had steady positive reviews at the mid of 2021 however there can be seen a surgence of negative reviews at the month of April and September of 2022.
 
 
 #### 2. **Which reviews garnered the most number of thumbs up from their reviews both positive and negative**
  
+<p align="center">
+  <img src="Resources\laz_TUC.png" alt="vs" width="400">
+</p>
+
  Based on Lazada reviews, negative ratings tend to receive more thumbs up on average, than positive ratings. 
+
+ <p align="center">
+  <img src="Resources\shopee_TUC.png" alt="vs" width="400">
+</p>
  
  The same trend can be seen with Shopee reviews, in which negative ratings tend to receive more thumbs up on average than positive ratings.
 
 #### 3. **Most frequently used words for positive and negative reviews**
 
+<p align="center">
+  <img src="Resources\laz_freq_pos.png" alt="vs" width="400">
+</p>
+
+<p align="center">
+  <img src="Resources\laz_freq_neg.png" alt="vs" width="400">
+</p>
+
  After adding some custom stopwords the word cloud is finally giving cohesive sentiments fleshing out the reviews based on positive and negative content. It can be seen in Lazada the most frequently used words for positive reviews mainly suggest positive qualities like the app is easy to use, good service and great. While, the most frequently used words for negative reviews are even, order, and product.
+
+<p align="center">
+  <img src="Resources\shopee_freq_pos.png" alt="vs" width="400">
+</p>
+
+<p align="center">
+  <img src="Resources\shopee_freq_neg.png" alt="vs" width="400">
+</p>
 
  Same thing with shopee by adding some custom stop words the sentiments become a lot fleshed out. The most frequently used words for positive reviews in shopee are good, thank and nice. On the other hand, the most frequently used words for negative reviews in shopee are order, even and customer service.
 
 #### 4. **What version of the app had the most positive and negative reviews**
 
+<p align="center">
+  <img src="Resources\laz_appv_distribution.png" alt="vs" width="450">
+</p>
+
  Lazada app version **6.38.2** had the most positive reviews, and app version **6.28.1** had the most negative reviews.
+
+<p align="center">
+  <img src="Resources\shopee_appv_distribution.png" alt="vs" width="450">
+</p>
 
  As for Shopee, the app version with the most positive reviews is version **2.80.30** and the version with the most negative reviews is version **2.86.11**.
 
@@ -208,9 +250,9 @@ In summary, RoBERTa outperforms VADER with a significantly higher accuracy, prec
 #### Negative Topics
 | Topic_Num | Topic Name                         | Topic_Perc_Contribution | Keywords                                           |
 |-----------|-----------------------------------|-------------------------|---------------------------------------------------|
-| 0         | Ad Annoyance and App Performance   | 0.9862                  | ad, good, annoying, pop, open, stop, download, hate, user, price |
-| 1         | User Experience and Feature Requests | 0.9705                  | use, product, update, buy, need, try, fix, want, work, time |
-| 2         | Order and Delivery Issues          | 0.9814                  | order, bad, service, delivery, customer, time, deliver, cancel, receive, courier |
+| 1         | Ad Annoyance and App Performance   | 0.9862                  | ad, good, annoying, pop, open, stop, download, hate, user, price |
+| 2         | User Experience and Feature Requests | 0.9705                  | use, product, update, buy, need, try, fix, want, work, time |
+| 3         | Order and Delivery Issues          | 0.9814                  | order, bad, service, delivery, customer, time, deliver, cancel, receive, courier |
 
 - In the "Ad Annoyance and App Performance" topic (Topic 0), users express frustration with ad-related issues, app performance, and pop-ups. The presence of keywords like "annoying," "hate," and "stop" suggests a negative sentiment regarding the ad experience and app performance.
 
@@ -221,9 +263,9 @@ In summary, RoBERTa outperforms VADER with a significantly higher accuracy, prec
 #### Positive Topics
 | Topic_Num | Topic Name                     | Topic_Perc_Contribution | Keywords                                             |
 |-----------|--------------------------------|-------------------------|-----------------------------------------------------|
-| 0         | User Satisfaction              | 0.9718                  | good, love, nice, service, buy, quality, satisfied, need, experience, customer |
-| 1         | Accessibility and Convenience   | 0.9779                  | thank, product, order, time, price, convenient, 😊, useful, want, far |
-| 2         | User-Friendly Experience        | 0.9684                  | easy, great, use, shop, delivery, fast, find, 🏻, cool, friendly |
+| 1         | User Satisfaction              | 0.9718                  | good, love, nice, service, buy, quality, satisfied, need, experience, customer |
+| 2         | Accessibility and Convenience   | 0.9779                  | thank, product, order, time, price, convenient, 😊, useful, want, far |
+| 3         | User-Friendly Experience        | 0.9684                  | easy, great, use, shop, delivery, fast, find, 🏻, cool, friendly |
 
 - In the "User Satisfaction" topic (Topic 0), users express satisfaction with various aspects of the app, including service quality, buying experience, and customer satisfaction. Keywords like "good," "love," and "nice" suggest a positive sentiment in this context.
 
@@ -237,9 +279,9 @@ In summary, RoBERTa outperforms VADER with a significantly higher accuracy, prec
 #### Negative Topics
 | Topic_Num | Topic Name                         | Topic_Perc_Contribution | Keywords                                           |
 |-----------|-----------------------------------|-------------------------|---------------------------------------------------|
-| 0         | Account and Payment Inconvenience  | 0.9754                  | use, good, time, account, pay, option, star, buy, shop, change |
-| 1         | Delivery and Service Issue         | 0.9824                  | order, service, delivery, customer, bad, time, receive, poor, refund, parcel |
-| 2         | App Problems and Product Concerns   | 0.9853                  | update, fix, product, work, try, phone, add, problem, ad, review |
+| 1         | Account and Payment Inconvenience  | 0.9754                  | use, good, time, account, pay, option, star, buy, shop, change |
+| 2         | Delivery and Service Issue         | 0.9824                  | order, service, delivery, customer, bad, time, receive, poor, refund, parcel |
+| 3         | App Problems and Product Concerns   | 0.9853                  | update, fix, product, work, try, phone, add, problem, ad, review |
 
 - The "Account and Payment Inconvenience" topic, with a topic contribution of 0.9754, highlights user concerns regarding account management and payment-related issues. Keywords like "time," "account," and "pay" indicate difficulties users face in these areas. Interestingly, the presence of terms like "good" and "option" suggests that users may have experienced both positive and negative aspects related to account and payment management.
 
@@ -250,15 +292,53 @@ In summary, RoBERTa outperforms VADER with a significantly higher accuracy, prec
 #### Positive Topics
 | Topic_Num | Topic Name                                    | Topic_Perc_Contribution | Keywords                                           |
 |-----------|----------------------------------------------|-------------------------|---------------------------------------------------|
-| 0         | Accessability and Convenience                  | 0.9654                  | thank, easy, use, shop, product, buy, need, convenient, lot, want |
-| 1         | Positive Ordering and Delivery Experience     | 0.9880                  | love, order, delivery, happy, fast, time, enjoy, star, deliver, hope |
-| 2         | Satisfaction with Quality and Service         | 0.9608                  | good, nice, great, satisfied, quality, service, 😊, experience, useful, customer |
+| 1         | Accessability and Convenience                  | 0.9654                  | thank, easy, use, shop, product, buy, need, convenient, lot, want |
+| 2         | Positive Ordering and Delivery Experience     | 0.9880                  | love, order, delivery, happy, fast, time, enjoy, star, deliver, hope |
+| 3         | Satisfaction with Quality and Service         | 0.9608                  | good, nice, great, satisfied, quality, service, 😊, experience, useful, customer |
 
 - The "Accessability and Convenience" topic, with a topic contribution of 0.9654, is characterized by positive sentiments related to accessibility and convenience. Users express gratitude and appreciation ("thank," "easy") for the ease of use, shopping, and product selection. The presence of keywords like "convenient" and "lot" suggests that users find the platform convenient and versatile for their needs.
 
 - The "Positive Ordering and Delivery Experience" topic stands out with a high topic contribution of 0.9880. Users in this topic express delight and satisfaction with the ordering and delivery process, using words like "love," "happy," and "enjoy." Keywords like "fast," "deliver," and "hope" reflect a positive sentiment, indicating a seamless and pleasant experience with ordering and receiving products.
 
 - In the "Satisfaction with Quality and Service" topic, users express contentment and approval of the quality and service provided. Keywords like "good," "nice," and "great" indicate a high level of satisfaction. Users also use emoticons like "😊" to express their positive feelings. This topic contributes significantly to the overall sentiment, with a topic contribution of 0.9608.
+
+## Recommendations<a name="recommendations"></a>
+
+To relieve some of the pain points that customers had encountered in their corresponding platforms here are some actions that could be taken:
+
+#### Lazada
+**Ad Annoyance and App Performance**
+- Optimize ad placement to reduce annoyance.
+- Improve app performance, addressing slow loading and pop-up issues.
+- Collect and act on user feedback to target improvements.
+
+**User Experience and Feature Requests**
+- Regularly update the app to fix bugs and enhance user experience.
+- Consider implementing user-requested features aligned with app goals.
+- Focus on usability improvements and pain point identification.
+
+**Order and Delivery Issues**
+- Strengthen customer support to address order and delivery problems.
+- Collaborate with couriers to ensure reliable deliveries.
+- Enhance real-time order tracking for transparent delivery.
+
+#### Shopee
+**Account and Payment Inconvenience**
+- Address user concerns about account and payment difficulties.
+- Enhance account management options and payment processes.
+- Investigate both positive and negative aspects of account and payment experiences.
+
+**Delivery and Service Issues**
+- Improve delivery and customer service to address user dissatisfaction.
+- Focus on resolving issues related to delivery times, service quality, and customer refunds.
+- Prioritize enhancing the overall service experience.
+
+**App Problems and Product Concerns**
+- Resolve app-related problems and address concerns about product quality.
+- Concentrate on app functionality, updates, and the impact of advertising on users.
+- Work to improve the app and product experience for users.
+
+Identifying and addressing customer pain points on e-commerce platforms like Lazada and Shopee is crucial. It directly impacts user satisfaction and the success of these platforms. By tackling issues like ad annoyance, app performance, order and delivery problems (Lazada), and account inconveniences, delivery issues, and app functionality (Shopee), both platforms can significantly improve the user experience. Monitoring user feedback and taking prompt actions to resolve these concerns not only enhance user satisfaction but also contribute to their continued growth and competitiveness in the e-commerce market.
 
 ## Conclusion<a name="conclusion"></a>
 The analysis of user sentiment and feedback on the platform reveals valuable insights into the user experience and satisfaction. The sentiment analysis models, particularly RoBERTa, demonstrate superior accuracy and sentiment classification compared to VADER. User feedback is a valuable resource for identifying areas of improvement, as negative topics pinpoint specific pain points that need attention. Additionally, positive topics highlight areas of strength and positive user experiences that should be maintained and promoted.
@@ -267,4 +347,15 @@ The platforms can leverage these insights to focus on addressing negative sentim
 
 All in all, both Lazada and Shopee as e-commerce platforms has its strengths and weaknesses and doing online shopping on one of these platforms is a matter of preferences or based on which gives the better experience.
 
-Further analysis can be made by improving some of the stages performed. During data cleaning and preprocessing langdetect was used to filter only english reviews in the data however there are instances of reviews being in "Taglish" or Tagalog mixed with English this means that if the review starts of with english and ends in Tagalog it will not be removed. The reason for using langdetect is for ease of use for filtering although it language detection accuracy may be affected because of length of review. Making a purely Tagalog/Filipino sentiment analysis could be another way of specifically targeting the Philippine buyer demographic.
+Further analysis can be made by improving some of the stages performed. During data cleaning and preprocessing langdetect was used to filter only english reviews in the data however there are instances of reviews being in "Taglish" or Tagalog mixed with English this means that if the review starts of with english and ends in Tagalog it will not be removed. The reason for using langdetect is for ease of use for filtering although its language detection accuracy may be affected because of length of review see [FAQ](Resources/langdetect%20FAQ.png). Making a purely Tagalog/Filipino sentiment analysis could be another way of specifically targeting the Philippine buyer demographic.
+
+## Dashboards<a name="dashboards"></a>
+
+<p align="center">
+  <img src="Resources\Lazada Dashboard.png" alt="vs" width="650">
+</p>
+
+<p align="center">
+  <img src="Resources\Shopee Dashboard.png" alt="vs" width="650">
+</p>
+
