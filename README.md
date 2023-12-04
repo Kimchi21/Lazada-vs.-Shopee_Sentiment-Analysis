@@ -94,7 +94,7 @@ The initial dataset for Lazada contained 788,257 rows. After preprocessing, whic
 #### 2. **Which reviews garnered the most number of thumbs up from their reviews both positive and negative**
  
 <p align="center">
-  <img src="Resources\laz_TUC.png" alt="vs" width="500">
+  <img src="Resources\laz_TUC.png" alt="vs" width="400">
 </p>
 
  Based on Lazada reviews, negative ratings tend to receive more thumbs up on average, than positive ratings. 
