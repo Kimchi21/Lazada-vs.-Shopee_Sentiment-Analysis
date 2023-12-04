@@ -1,17 +1,16 @@
 # Lazada vs. Shopee - Sentiment Analysis
 
 <p align="center">
-  <img src="https://cdn-oss.ginee.com/official/wp-content/uploads/2021/10/Screen-Shot-2021-10-11-at-6.00.15-PM.png" alt="vs" width="400">
+  <img src="https://cdn-oss.ginee.com/official/wp-content/uploads/2021/10/Screen-Shot-2021-10-11-at-6.00.15-PM.png" alt="vs" width="450">
 </p>
 
 ## Table of Contents
 1. [Overview](#overview)
 2. [Methodology](#methodology)
 3. [Exploratory Data Analysis](#exploratory-data-analysis)
-4. [Results](#results)
+4. [Results and Conclusion](#results-and-conclusion)
 5. [Recommendations](#recommendations)
-6. [Conclusion](#conclusion)
-7. [Dashboards](#dashboards)
+6. [Dashboards](#dashboards)
 
 ## Overview<a name="overview"></a>
 Undoubtedly, online shopping has emerged as one of the most transformative modern conveniences. Among the Philippines' top e-commerce platforms, **Lazada** and **Shopee** stand out as highly favored choices. The e-commerce industry is rapidly evolving, and platforms like Lazada and Shopee have solidified their positions as pivotal contenders in the online shopping market. To guide informed decision-making, enhance user experiences, and shape effective marketing strategies, gaining a deep understanding of how users perceive and engage with these platforms is imperative.
@@ -85,17 +84,23 @@ The initial dataset for Lazada contained 788,257 rows. After preprocessing, whic
 
  As for Shopee the distribution of reviews by user rating in Shopee unfortunately go back only to 2021 this might be because of the data being scraped. It had steady positive reviews at the mid of 2021 however there can be seen a surgence of negative reviews at the month of April and September of 2022.
 
+#### 2. **What trends could be seen over time based on the reviews**
+
+<p align="center">
+  <img src="Resources\laz_rty.png" alt="lazrty" width="600">
+</p>
+
 
 #### 2. **Which reviews garnered the most number of thumbs up from their reviews both positive and negative**
  
 <p align="center">
-  <img src="Resources\laz_TUC.png" alt="vs" width="400">
+  <img src="Resources\laz_TUC.png" alt="vs" width="500">
 </p>
 
  Based on Lazada reviews, negative ratings tend to receive more thumbs up on average, than positive ratings. 
 
  <p align="center">
-  <img src="Resources\shopee_TUC.png" alt="vs" width="400">
+  <img src="Resources\shopee_TUC.png" alt="vs" width="500">
 </p>
  
  The same trend can be seen with Shopee reviews, in which negative ratings tend to receive more thumbs up on average than positive ratings.
@@ -103,21 +108,21 @@ The initial dataset for Lazada contained 788,257 rows. After preprocessing, whic
 #### 3. **Most frequently used words for positive and negative reviews**
 
 <p align="center">
-  <img src="Resources\laz_freq_pos.png" alt="vs" width="400">
+  <img src="Resources\laz_freq_pos.png" alt="vs" width="500">
 </p>
 
 <p align="center">
-  <img src="Resources\laz_freq_neg.png" alt="vs" width="400">
+  <img src="Resources\laz_freq_neg.png" alt="vs" width="500">
 </p>
 
  After adding some custom stopwords the word cloud is finally giving cohesive sentiments fleshing out the reviews based on positive and negative content. It can be seen in Lazada the most frequently used words for positive reviews mainly suggest positive qualities like the app is easy to use, good service and great. While, the most frequently used words for negative reviews are even, order, and product.
 
 <p align="center">
-  <img src="Resources\shopee_freq_pos.png" alt="vs" width="400">
+  <img src="Resources\shopee_freq_pos.png" alt="vs" width="500">
 </p>
 
 <p align="center">
-  <img src="Resources\shopee_freq_neg.png" alt="vs" width="400">
+  <img src="Resources\shopee_freq_neg.png" alt="vs" width="500">
 </p>
 
  Same thing with shopee by adding some custom stop words the sentiments become a lot fleshed out. The most frequently used words for positive reviews in shopee are good, thank and nice. On the other hand, the most frequently used words for negative reviews in shopee are order, even and customer service.
@@ -125,13 +130,13 @@ The initial dataset for Lazada contained 788,257 rows. After preprocessing, whic
 #### 4. **What version of the app had the most positive and negative reviews**
 
 <p align="center">
-  <img src="Resources\laz_appv_distribution.png" alt="vs" width="450">
+  <img src="Resources\laz_appv_distribution.png" alt="vs" width="550">
 </p>
 
  Lazada app version **6.38.2** had the most positive reviews, and app version **6.28.1** had the most negative reviews.
 
 <p align="center">
-  <img src="Resources\shopee_appv_distribution.png" alt="vs" width="450">
+  <img src="Resources\shopee_appv_distribution.png" alt="vs" width="550">
 </p>
 
  As for Shopee, the app version with the most positive reviews is version **2.80.30** and the version with the most negative reviews is version **2.86.11**.
@@ -149,7 +154,7 @@ The dataset contains the following features:
 | score           |   int   |   Star rating of users gave (1-5)   |
 | sentimentLabel           |   int   |   Sentiment label according to the stars given   <br> Positive Sentiment: 1 ----> 4 - 5 star ratings<br>Negative Sentiment: 0 ----> 1-3 star ratings| 
 
-## Results<a name="results"></a>
+## Results and Conclusion<a name="results-and-conclusion"></a>
 
 ### Lazada Sentiment Analysis Report
 
@@ -302,6 +307,19 @@ In summary, RoBERTa outperforms VADER with a significantly higher accuracy, prec
 
 - In the "Satisfaction with Quality and Service" topic, users express contentment and approval of the quality and service provided. Keywords like "good," "nice," and "great" indicate a high level of satisfaction. Users also use emoticons like "😊" to express their positive feelings. This topic contributes significantly to the overall sentiment, with a topic contribution of 0.9608.
 
+
+**Conclusion**
+
+The analysis of user sentiment and feedback on the platform reveals valuable insights into the user experience and satisfaction. The sentiment analysis models, particularly RoBERTa, demonstrate superior accuracy and sentiment classification compared to VADER. User feedback is a valuable resource for identifying areas of improvement, as negative topics pinpoint specific pain points that need attention. Additionally, positive topics highlight areas of strength and positive user experiences that should be maintained and promoted.
+
+The platforms can leverage these insights to focus on addressing negative sentiments and enhancing positive aspects to provide an overall improved user experience. By continuously monitoring and analyzing user sentiment, the platform can adapt to changing user needs and preferences, ultimately leading to increased user satisfaction and loyalty.
+
+All in all, both Lazada and Shopee as e-commerce platforms has its strengths and weaknesses and doing online shopping on one of these platforms is a matter of preferences or based on which gives the better experience.
+
+Further analysis can be made by improving some of the stages performed. During data cleaning and preprocessing langdetect was used to filter only english reviews in the data however there are instances of reviews being in "Taglish" or Tagalog mixed with English this means that if the review starts of with english and ends in Tagalog it will not be removed. The reason for using langdetect is for ease of use for filtering although its language detection accuracy may be affected because of length of review see [FAQ](Resources/langdetect%20FAQ.png). Making a purely Tagalog/Filipino sentiment analysis could be another way of specifically targeting the Philippine buyer demographic.
+
+
+
 ## Recommendations<a name="recommendations"></a>
 
 To relieve some of the pain points that customers had encountered in their corresponding platforms here are some actions that could be taken:
@@ -340,22 +358,14 @@ To relieve some of the pain points that customers had encountered in their corre
 
 Identifying and addressing customer pain points on e-commerce platforms like Lazada and Shopee is crucial. It directly impacts user satisfaction and the success of these platforms. By tackling issues like ad annoyance, app performance, order and delivery problems (Lazada), and account inconveniences, delivery issues, and app functionality (Shopee), both platforms can significantly improve the user experience. Monitoring user feedback and taking prompt actions to resolve these concerns not only enhance user satisfaction but also contribute to their continued growth and competitiveness in the e-commerce market.
 
-## Conclusion<a name="conclusion"></a>
-The analysis of user sentiment and feedback on the platform reveals valuable insights into the user experience and satisfaction. The sentiment analysis models, particularly RoBERTa, demonstrate superior accuracy and sentiment classification compared to VADER. User feedback is a valuable resource for identifying areas of improvement, as negative topics pinpoint specific pain points that need attention. Additionally, positive topics highlight areas of strength and positive user experiences that should be maintained and promoted.
-
-The platforms can leverage these insights to focus on addressing negative sentiments and enhancing positive aspects to provide an overall improved user experience. By continuously monitoring and analyzing user sentiment, the platform can adapt to changing user needs and preferences, ultimately leading to increased user satisfaction and loyalty.
-
-All in all, both Lazada and Shopee as e-commerce platforms has its strengths and weaknesses and doing online shopping on one of these platforms is a matter of preferences or based on which gives the better experience.
-
-Further analysis can be made by improving some of the stages performed. During data cleaning and preprocessing langdetect was used to filter only english reviews in the data however there are instances of reviews being in "Taglish" or Tagalog mixed with English this means that if the review starts of with english and ends in Tagalog it will not be removed. The reason for using langdetect is for ease of use for filtering although its language detection accuracy may be affected because of length of review see [FAQ](Resources/langdetect%20FAQ.png). Making a purely Tagalog/Filipino sentiment analysis could be another way of specifically targeting the Philippine buyer demographic.
 
 ## Dashboards<a name="dashboards"></a>
 
 <p align="center">
-  <img src="Resources\Lazada Dashboard.png" alt="vs" width="650">
+  <img src="Resources\Lazada Dashboard2.png" alt="vs" width="650">
 </p>
 
 <p align="center">
-  <img src="Resources\Shopee Dashboard.png" alt="vs" width="650">
+  <img src="Resources\Shopee Dashboard2.png" alt="vs" width="650">
 </p>
 
