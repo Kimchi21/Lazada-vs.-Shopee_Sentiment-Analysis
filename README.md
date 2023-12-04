@@ -90,8 +90,39 @@ The initial dataset for Lazada contained 788,257 rows. After preprocessing, whic
   <img src="Resources\laz_rty.png" alt="lazrty" width="600">
 </p>
 
+<p align="center">
+  <img src="Resources\laz_rtq.png" alt="lazrtq" width="600">
+</p>
 
-#### 2. **Which reviews garnered the most number of thumbs up from their reviews both positive and negative**
+<p align="center">
+  <img src="Resources\laz_rtm.png" alt="lazrtm" width="600">
+</p>
+
+<p align="center">
+  <img src="Resources\laz_rtd.png" alt="lazrtd" width="600">
+</p>
+
+The peak in reviews occurred during November 2019, particularly on the 11th day of that month, coinciding with Lazada's significant sales events. Lazada is known for its monthly sales, adopting a format where the day matches the month number (e.g., 1.1 for January, 2.2 for February). During these events, products are offered at discounted rates, accompanied by free shipping vouchers, cashback, and Lazada bonuses, making it the best time for consumers to make purchases. This surge in reviews during sales periods suggests a correlation between consumer feedback and the occurrence of these promotional events, indicating levels of satisfaction or dissatisfaction. Does it mean that during other years, the same trend could be seen? In my opinion, I don't think so, because drilling down into other years will provide insights into that specific year, but this overall top-down view of the whole review trend provides a good surface-level view of the analysis.
+
+<p align="center">
+  <img src="Resources\shopee_rty.png" alt="shopeerty" width="600">
+</p>
+
+<p align="center">
+  <img src="Resources\shopee_rtq.png" alt="shopeertq" width="600">
+</p>
+
+<p align="center">
+  <img src="Resources\shopee_rtm.png" alt="shopeertm" width="600">
+</p>
+
+<p align="center">
+  <img src="Resources\shopee_rtd.png" alt="shopeertd" width="600">
+</p>
+
+In 2022, reviews surged to a total of 71,297, peaking notably in the 3rd quarter with 54,657 reviews, particularly in August, July, and September (18,262, 18,236, and 18,159, respectively). The 18th day of each month notably stood out as the peak day with 5,942 reviews, while review spikes were also noticeable at the start, middle, and end of the month. These fluctuations appear to align with both quarterly and yearly trends in review activity. Shopee's diverse range of sales events, including Shopee Flash Sale, ShopeePay Exclusives, Lowest Price Guaranteed, Shopee Double Double Sale, and Shopee Prizes, likely contribute to the heightened activity on the platform. This could potentially correlate with observed peaks in review submissions across various periods throughout the year.
+
+#### 3. **Which reviews garnered the most number of thumbs up from their reviews both positive and negative**
  
 <p align="center">
   <img src="Resources\laz_TUC.png" alt="vs" width="400">
@@ -105,7 +136,7 @@ The initial dataset for Lazada contained 788,257 rows. After preprocessing, whic
  
  The same trend can be seen with Shopee reviews, in which negative ratings tend to receive more thumbs up on average than positive ratings.
 
-#### 3. **Most frequently used words for positive and negative reviews**
+#### 4. **Most frequently used words for positive and negative reviews**
 
 <p align="center">
   <img src="Resources\laz_freq_pos.png" alt="vs" width="500">
@@ -127,7 +158,7 @@ The initial dataset for Lazada contained 788,257 rows. After preprocessing, whic
 
  Same thing with shopee by adding some custom stop words the sentiments become a lot fleshed out. The most frequently used words for positive reviews in shopee are good, thank and nice. On the other hand, the most frequently used words for negative reviews in shopee are order, even and customer service.
 
-#### 4. **What version of the app had the most positive and negative reviews**
+#### 5. **What version of the app had the most positive and negative reviews**
 
 <p align="center">
   <img src="Resources\laz_appv_distribution.png" alt="vs" width="550">
