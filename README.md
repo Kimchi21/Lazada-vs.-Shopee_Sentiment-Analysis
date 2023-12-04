@@ -125,7 +125,7 @@ In 2022, reviews surged to a total of 71,297, peaking notably in the 3rd quarter
 #### 3. **Which reviews garnered the most number of thumbs up from their reviews both positive and negative**
  
 <p align="center">
-  <img src="Resources\laz_TUC.png" alt="vs" width="400">
+  <img src="Resources\Laz_TUC.png" alt="vs" width="500">
 </p>
 
  Based on Lazada reviews, negative ratings tend to receive more thumbs up on average, than positive ratings. 
